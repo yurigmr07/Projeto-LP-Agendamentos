@@ -1,10 +1,10 @@
 package encomendas;
 
-import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 
-public interface SistemaDeAgendamento {
+public interface MeuSistemaDeAgendamento {
+
+    void agendar(String cliente, String data, String hora) throws HorarioIndisponivelException;
 
     public void cancelar(int id) throws AgendamentoNaoEncontradoException;
 
